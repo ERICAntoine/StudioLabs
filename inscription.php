@@ -1,3 +1,22 @@
+<?php
+    session_start();
+
+    $server = "localhost";
+    $dbname= "StudioLab";
+    $username = "admin";
+    $password= "root";
+
+    try{
+        $db_connect = new PDO("mysql:host=$server; dbname=$dbname", $username, $password);
+        echo "Success";
+    }
+    catch (PDOException $error)
+    {
+        echo "Connection failure";
+    }
+?>
+
+
 <html>
     <?php
         include("component/Head/head2.php"); 
